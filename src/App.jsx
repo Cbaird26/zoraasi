@@ -45,23 +45,14 @@ function Shell({ children }) {
     >
       <style>{`
         @keyframes zoraPulse {
-          0% { transform: scale(0.986) rotate(0deg); opacity: 0.84; filter: hue-rotate(0deg) saturate(1.02) brightness(0.95); }
-          8% { transform: scale(1.016) rotate(12deg); opacity: 0.92; filter: hue-rotate(28deg) saturate(1.08) brightness(1.02); }
-          16% { transform: scale(1.04) rotate(24deg); opacity: 0.98; filter: hue-rotate(54deg) saturate(1.12) brightness(1.06); }
-          28% { transform: scale(1.015) rotate(38deg); opacity: 0.9; filter: hue-rotate(96deg) saturate(1.08) brightness(1.01); }
-          40% { transform: scale(1.032) rotate(58deg); opacity: 0.95; filter: hue-rotate(138deg) saturate(1.12) brightness(1.05); }
-          56% { transform: scale(1.01) rotate(82deg); opacity: 0.9; filter: hue-rotate(186deg) saturate(1.08) brightness(1.01); }
-          76% { transform: scale(0.996) rotate(116deg); opacity: 0.86; filter: hue-rotate(252deg) saturate(1.04) brightness(0.98); }
-          100% { transform: scale(0.986) rotate(160deg); opacity: 0.84; filter: hue-rotate(360deg) saturate(1.02) brightness(0.95); }
+          0% { transform: scale(0.988) rotate(0deg); opacity: 0.84; filter: hue-rotate(0deg) saturate(1.02) brightness(0.95); }
+          50% { transform: scale(1.04) rotate(84deg); opacity: 0.98; filter: hue-rotate(180deg) saturate(1.12) brightness(1.06); }
+          100% { transform: scale(0.988) rotate(168deg); opacity: 0.84; filter: hue-rotate(360deg) saturate(1.02) brightness(0.95); }
         }
         @keyframes zoraHalo {
-          0% { opacity: 0.2; transform: scale(0.995); }
-          8% { opacity: 0.28; transform: scale(1.01); }
-          16% { opacity: 0.38; transform: scale(1.02); }
-          28% { opacity: 0.26; transform: scale(1.008); }
-          40% { opacity: 0.34; transform: scale(1.018); }
-          56% { opacity: 0.25; transform: scale(1.006); }
-          100% { opacity: 0.2; transform: scale(0.995); }
+          0% { opacity: 0.2; transform: scale(0.996); }
+          50% { opacity: 0.38; transform: scale(1.02); }
+          100% { opacity: 0.2; transform: scale(0.996); }
         }
       `}</style>
       <div style={{ maxWidth: 1240, margin: "0 auto", padding: "24px 18px 56px" }}>{children}</div>
@@ -224,10 +215,10 @@ function ZoraPattern({ focusExponent, geometry, drift, bloom }) {
           Zora Pattern
         </div>
         <div style={{ color: P.white, fontSize: 28, fontWeight: 700, fontFamily: "'Georgia', serif", marginBottom: 8 }}>
-          Two-Stroke Field with Long Release
+          Natural Coherence Breath
         </div>
         <div style={{ color: P.text, lineHeight: 1.8, maxWidth: 760 }}>
-          The pattern uses a calm two-beat pulse followed by a long release. It is designed as a visual form explorer, not as a forceful sensory override.
+          The pattern now moves as one natural breath while coherence vibrates through the field. It is designed as a visual form explorer, not as a forceful sensory override.
         </div>
       </div>
     </div>
@@ -328,7 +319,7 @@ export default function App() {
         <div style={{ color: P.gold, fontSize: 11, textTransform: "uppercase", letterSpacing: "0.18em", marginBottom: 8 }}>Pattern Portal</div>
         <h1 style={{ margin: 0, color: P.white, fontSize: 46, lineHeight: 1.04, fontFamily: "'Georgia', serif" }}>Zora Discovery</h1>
         <div style={{ marginTop: 12, color: P.text, maxWidth: 860, lineHeight: 1.8 }}>
-          Zora Discovery is a visual form explorer organized around the Zora Pattern: a layered toroidal field, a wide conceptual scale keyboard, and a calm two-stroke pulse with long release.
+          Zora Discovery is a visual form explorer organized around the Zora Pattern: a layered toroidal field, a wide conceptual scale keyboard, and one natural coherence breath.
         </div>
       </div>
 
@@ -391,7 +382,7 @@ export default function App() {
           {activeTab === "Pattern" ? (
             <Panel title="Pattern Logic" subtitle="The default view keeps the form itself in focus." accent={P.blue}>
               <div style={{ color: P.text, lineHeight: 1.8 }}>
-                The current field is built from overlapping circles arranged in a toroidal rhythm. Geometry changes the spread of the lattice, drift changes the rotational bias, and bloom changes the halo intensity while keeping the same two-stroke cadence.
+                The current field is built from overlapping circles arranged in a toroidal rhythm. Geometry changes the spread of the lattice, drift changes the rotational bias, and bloom changes the halo intensity while keeping the same natural-breath cadence.
               </div>
             </Panel>
           ) : null}
@@ -416,7 +407,7 @@ export default function App() {
                   letterSpacing: "0.08em",
                 }}
               >
-                {sequenceState === "READY" ? "Engage" : sequenceState === "SWEEP" ? "Sweep In Progress" : sequenceState === "WHITEOUT" ? "Whiteout Holding" : "Arrived"}
+                {sequenceState === "READY" ? "Engage" : sequenceState === "SWEEP" ? "Sweep In Progress" : sequenceState === "WHITEOUT" ? "Warp Holding" : "Arrived"}
               </button>
               <Control label="Focus Exponent" value={focusExponent} min={-122} max={122} step={1} onChange={setFocusExponent} />
               <Control label="Geometry" value={geometry} min={0.2} max={1} step={0.01} onChange={setGeometry} />
@@ -456,7 +447,7 @@ export default function App() {
           }}
         >
           <div style={{ textAlign: "center" }}>
-            <div style={{ fontSize: 42, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 12 }}>Whiteout</div>
+            <div style={{ fontSize: 42, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 12 }}>Warp</div>
             <div style={{ fontSize: 16, lineHeight: 1.7 }}>Press anywhere or hit Esc when ready to arrive.</div>
           </div>
         </button>

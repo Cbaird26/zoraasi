@@ -25,14 +25,14 @@ export const FIELD_NOTES = [
   },
   {
     label: "Motion",
-    body: "The pattern uses a gentle two-stroke pulse followed by a long release instead of a hard flash.",
+    body: "The pattern uses one natural coherence breath instead of a hard flash or rigid pulse sequence.",
   },
 ];
 
 export const MANUAL_STEPS = [
   "Set the focus exponent to choose the scale band you want to examine.",
   "Adjust geometry, drift, and bloom to shape the current pattern without changing the underlying cadence.",
-  "Use ENGAGE to run the scale sweep from 10^-122 to 10^122, then confirm arrival after the held whiteout.",
+  "Use ENGAGE to run the scale sweep from 10^-122 to 10^122, then confirm arrival after the held WARP screen.",
   "Use the field notes as interpretation, not as claims about external physics or health effects.",
   "If the pattern feels too active, reduce bloom or motion depth and stay in the Human scale band.",
 ];

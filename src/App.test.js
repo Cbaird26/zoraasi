@@ -14,7 +14,7 @@ describe("Zora Discovery app", () => {
     render(React.createElement(App));
     expect(screen.getByText("Zora Discovery")).toBeTruthy();
     expect(screen.getByText("Zora Pattern")).toBeTruthy();
-    expect(screen.getByText("Two-Stroke Field with Long Release")).toBeTruthy();
+    expect(screen.getByText("Natural Coherence Breath")).toBeTruthy();
   });
 
   test("switches tabs and keeps the focus exponent control available", () => {
@@ -34,7 +34,7 @@ describe("Zora Discovery app", () => {
     expect(screen.getByRole("button", { name: "Sweep In Progress" })).toBeTruthy();
 
     await vi.advanceTimersByTimeAsync(4000);
-    expect(screen.getByRole("button", { name: /whiteout press anywhere or hit esc when ready to arrive/i })).toBeTruthy();
+    expect(screen.getByRole("button", { name: /warp press anywhere or hit esc when ready to arrive/i })).toBeTruthy();
 
     fireEvent.click(screen.getByRole("button", { name: /press anywhere or hit esc when ready to arrive/i }));
     expect(screen.getAllByText("Arrived").length).toBeGreaterThan(0);
